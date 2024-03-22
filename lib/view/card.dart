@@ -41,6 +41,7 @@ class InvoiceItemWidget extends StatelessWidget {
               icon: Icon(Icons.delete),
               onPressed: onDelete,
             ),
+
           ],
         ),
       ),

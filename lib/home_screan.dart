@@ -49,7 +49,7 @@ class HomeScreenState extends State<HomeScreen> {
                 },
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {
                 setState(() {
@@ -83,16 +83,14 @@ void previewPDF(List a) async {
       build: (pw.Context context) {
 
         return pw.Column(
-
           children: [
             pw.Text('Invoice Items', style: pw.TextStyle(fontSize: 20)),
             pw.SizedBox(height: 16),
-            pw.Row(
+            pw.Column(
               mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
               children: [
                 for (var item in a)
-                  pw.Column(
-                    children: [
+
                       pw.Row(
                         mainAxisAlignment: pw.MainAxisAlignment.spaceBetween,
                         children: [
@@ -100,10 +98,11 @@ void previewPDF(List a) async {
                           pw.Text('-----------------',style: pw.TextStyle(fontSize: 10,letterSpacing: 5)),
                           pw.SizedBox(width: 50),
                           pw.Text(item.amount.toString(),style: pw.TextStyle(fontSize: 20)),
+                          pw.Text('\n'),
+
                         ],
                       ),
-                    ]
-                  )
+
 
               ],
             ),
