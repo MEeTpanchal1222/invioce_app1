@@ -3,7 +3,7 @@ import 'model.dart';
 //✌ this is meet here ✌;
 
 class InvoiceItemWidget extends StatelessWidget {
-  final InvoiceItem item;//object of invioceItem class;
+  final InvoiceItem item;//object of invioceItem modale class;
   final VoidCallback onDelete;//voidcallback is representing a function that takes no arguments and returns void.
 
    InvoiceItemWidget(
@@ -22,7 +22,7 @@ class InvoiceItemWidget extends StatelessWidget {
               child: TextFormField(
                 initialValue: item.description,//that time we declerd item name object
                 onChanged: (value) {
-                  item.description = value;//item is model s object;
+                  item.description = value;//item is model's object;
                 },
                 decoration: InputDecoration(labelText: 'Description',),
               ),
@@ -31,7 +31,7 @@ class InvoiceItemWidget extends StatelessWidget {
             Expanded(
               flex: 1,
               child: TextFormField(
-                initialValue: item.amount.toString(),
+                initialValue: item.amount.toString(),//this most valuble initailvalue that tostring;
                 keyboardType: TextInputType.number,
                 onChanged: (value) {
                   item.amount = double.tryParse(value) ?? 0.0;//if that is no value then in pdf we see amount is 0.0;
@@ -41,7 +41,7 @@ class InvoiceItemWidget extends StatelessWidget {
             ),
             IconButton(
               icon: Icon(Icons.delete),
-              onPressed: onDelete,//we add function at home screen; by call function ;
+              onPressed: onDelete, //we add function at home screen; by call function ;
             ),
 
           ],

@@ -4,5 +4,5 @@ class InvoiceItem {
   String description;
   double amount;
 
-  InvoiceItem({this.description = '', this.amount = 0.0});
+  InvoiceItem({this.description = '', this.amount = 0.0});//constucter we define all value for defulte
 }

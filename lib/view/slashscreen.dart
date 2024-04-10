@@ -8,8 +8,8 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
-  void initState() {
-    super.initState();
+  void initState() {  //code first exeuted is initstate
+    super.initState();//first he call all bulid methoed then futeure.delayed work;
     Future.delayed(Duration(seconds: 1), () {
       Navigator.pushNamed(context,'/home' );
     });

@@ -116,8 +116,9 @@ void previewPDF(List a) async {
   );
 
   final pdfBytes = await pdf.save();
-  //printing 🎫
+  //printing 🎫,by ading layoutpdf
   await Printing.layoutPdf(
+    //onlayout in we put pdfpageformat = format ,pdfbytes is variable = pdf.save
     onLayout: (PdfPageFormat format) async => pdfBytes,//we call pdf.save
   );
 }
